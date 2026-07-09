@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -404,3 +405,411 @@
 
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muhammad Shahrul Aiman — ATS Resume</title>
+  <meta name="robots" content="noindex">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f0f0f0;
+      color: #111;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    /* ── Toolbar ── */
+    .ats-toolbar {
+      position: sticky; top: 0; z-index: 100;
+      background: #1e1b2e;
+      color: #f8fafc;
+      padding: 12px 24px;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 16px; flex-wrap: wrap;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+    .toolbar-info { display: flex; align-items: center; gap: 12px; }
+    .ats-badge {
+      background: #7b5cff; color: #fff;
+      font-size: 11px; font-weight: 700; letter-spacing: 0.08em;
+      padding: 3px 9px; border-radius: 4px; text-transform: uppercase;
+    }
+    .toolbar-label { font-size: 13px; color: #cbd5e1; }
+    .toolbar-hint  { font-size: 12px; color: #94a3b8; font-style: italic; }
+    .toolbar-actions { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+
+    .btn-print {
+      display: inline-flex; align-items: center; gap: 7px;
+      background: #7b5cff; color: #fff; border: none;
+      padding: 9px 18px; border-radius: 6px;
+      font-size: 13px; font-weight: 700; cursor: pointer;
+      font-family: Arial, sans-serif; transition: background 150ms;
+      text-decoration: none;
+    }
+    .btn-print:hover { background: #6e40f5; color: #fff; }
+
+    .btn-back {
+      display: inline-flex; align-items: center; gap: 7px;
+      background: transparent; color: #cbd5e1;
+      border: 1px solid #475569;
+      padding: 8px 16px; border-radius: 6px;
+      font-size: 13px; font-weight: 600; cursor: pointer;
+      font-family: Arial, sans-serif; transition: all 150ms;
+      text-decoration: none;
+    }
+    .btn-back:hover { background: #334155; color: #f8fafc; }
+
+    /* ── Paper ── */
+    .page-wrap { padding: 32px 16px 48px; }
+
+    .resume-page {
+      width: 794px; max-width: 100%;
+      margin: 0 auto; background: #fff;
+      padding: 48px 52px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+    }
+
+    /* ── Header ── */
+    .r-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 20px;
+      margin-bottom: 2px;
+    }
+    .r-header-left { flex: 1; }
+
+    .r-name {
+      font-size: 22px; font-weight: 700;
+      letter-spacing: 0.5px; color: #111;
+      margin-bottom: 4px;
+    }
+    .r-title { font-size: 13px; color: #444; margin-bottom: 8px; }
+    .r-contact { font-size: 12px; color: #333; line-height: 1.7; }
+    .r-contact a { color: #333; text-decoration: none; }
+    .r-sep { color: #999; margin: 0 6px; }
+
+    /* Profile photo */
+    .r-photo {
+      width: 90px; height: 110px;
+      object-fit: cover;
+      border: 1.5px solid #ccc;
+      border-radius: 4px;
+      flex-shrink: 0;
+    }
+    .r-photo-fallback {
+      display: none;
+      width: 90px; height: 110px;
+      background: #f0eeff;
+      border: 1.5px solid #ccc;
+      border-radius: 4px;
+      align-items: center; justify-content: center;
+      font-size: 1rem; font-weight: 700; color: #7b5cff;
+      flex-shrink: 0;
+    }
+
+    /* ── Sections ── */
+    .r-section { margin-top: 16px; }
+    .r-section-title {
+      font-size: 12px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.08em;
+      color: #111; border-bottom: 1px solid #111;
+      padding-bottom: 3px; margin-bottom: 10px;
+    }
+
+    .r-para { font-size: 12px; color: #222; line-height: 1.65; }
+
+    /* Skills table */
+    .r-skills-table { width: 100%; border-collapse: collapse; }
+    .r-skills-table td { font-size: 12px; color: #222; padding: 2px 0; vertical-align: top; }
+    .r-skills-table td:first-child { font-weight: 700; width: 150px; padding-right: 8px; white-space: nowrap; }
+
+    /* Entries */
+    .r-entry { margin-bottom: 12px; }
+    .r-entry:last-child { margin-bottom: 0; }
+
+    .r-entry-header {
+      display: flex; justify-content: space-between;
+      align-items: baseline; gap: 8px; margin-bottom: 3px;
+    }
+    .r-entry-title   { font-size: 12.5px; font-weight: 700; color: #111; }
+    .r-entry-company { font-weight: 400; }
+    .r-entry-date    { font-size: 11.5px; color: #444; white-space: nowrap; flex-shrink: 0; }
+    .r-entry-sub     { font-size: 11.5px; color: #444; margin-bottom: 3px; font-style: italic; }
+    .r-entry-tech    { font-size: 11.5px; color: #333; margin-bottom: 4px; }
+    .r-entry-tech span { font-weight: 700; }
+
+    .r-ul { padding-left: 16px; list-style: disc; }
+    .r-ul li { font-size: 12px; color: #222; margin-bottom: 2px; line-height: 1.55; }
+
+    .r-gpa { font-size: 12px; font-weight: 700; color: #222; }
+
+    /* Additional table */
+    .r-additional-table { width: 100%; border-collapse: collapse; }
+    .r-additional-table td { font-size: 12px; color: #222; padding: 2px 0; vertical-align: top; }
+    .r-additional-table td:first-child { font-weight: 700; width: 120px; padding-right: 8px; white-space: nowrap; }
+
+    /* ── Print ── */
+    @media print {
+      body { background: white; }
+      .ats-toolbar { display: none !important; }
+      .page-wrap { padding: 0; }
+      .resume-page { width: 100%; max-width: 100%; margin: 0; padding: 18mm 18mm; box-shadow: none; }
+      @page { size: A4; margin: 0; }
+    }
+
+    /* ── Mobile ── */
+    @media (max-width: 640px) {
+      .toolbar-hint { display: none; }
+      .ats-toolbar { padding: 10px 16px; }
+      .resume-page { padding: 28px 20px; }
+      .r-photo { width: 70px; height: 86px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Toolbar -->
+  <div class="ats-toolbar" role="toolbar" aria-label="ATS resume actions">
+    <div class="toolbar-info">
+      <span class="ats-badge">ATS Mode</span>
+      <span class="toolbar-label">Plain-text resume — optimised for Applicant Tracking Systems</span>
+    </div>
+    <div class="toolbar-actions">
+      <span class="toolbar-hint">Print → Save as PDF to download</span>
+      <a href="index.html" class="btn-back" aria-label="Back to portfolio">← Back to Portfolio</a>
+      <button class="btn-print" onclick="window.print()" aria-label="Print or save as PDF">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polyline points="6 9 6 2 18 2 18 9"/>
+          <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/>
+          <rect x="6" y="14" width="12" height="8"/>
+        </svg>
+        Print / Save as PDF
+      </button>
+    </div>
+  </div>
+
+  <!-- Resume Paper -->
+  <div class="page-wrap">
+    <div class="resume-page" role="main" aria-label="ATS resume content">
+
+      <!-- Header with photo -->
+      <div class="r-header">
+        <div class="r-header-left">
+          <h1 class="r-name">MUHAMMAD SHAHRUL AIMAN BIN MOKHTAR</h1>
+          <p class="r-title">Computer Science Undergraduate | Software Developer</p>
+          <div class="r-contact">
+            <a href="mailto:aimanmokhtar296@gmail.com">aimanmokhtar296@gmail.com</a>
+            <span class="r-sep">|</span>
+            <a href="tel:+601172735439">011-7273-5439</a>
+            <span class="r-sep">|</span>
+            <a href="https://linkedin.com/in/shahrul-aiman" target="_blank" rel="noopener noreferrer">linkedin.com/in/shahrul-aiman</a>
+            <span class="r-sep">|</span>
+            <a href="https://github.com/yourname" target="_blank" rel="noopener noreferrer">github.com/yourname</a>
+            <span class="r-sep">|</span>
+            Bagan Datuk, Perak, Malaysia
+          </div>
+        </div>
+        <img
+          src="assets/profile.jpg"
+          alt="Muhammad Shahrul Aiman"
+          class="r-photo"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+        >
+        <div class="r-photo-fallback" aria-hidden="true">MSA</div>
+      </div>
+
+      <!-- Summary -->
+      <div class="r-section">
+        <h2 class="r-section-title">Professional Summary</h2>
+        <p class="r-para">
+          Computer Science undergraduate specialising in Maritime Informatics at Universiti Malaysia Terengganu (UMT),
+          Faculty of Computing and Mathematics. CGPA 3.34. Hands-on experience building web-based systems, IoT monitoring
+          solutions, and database-driven applications using Java, Python, and modern web technologies. Fast learner with
+          strong analytical thinking and a proven ability to work independently and within a team. Actively seeking IT
+          internship opportunities to contribute to real-world software engineering environments.
+        </p>
+      </div>
+
+      <!-- Skills -->
+      <div class="r-section">
+        <h2 class="r-section-title">Technical Skills</h2>
+        <table class="r-skills-table" aria-label="Technical skills">
+          <tbody>
+            <tr>
+              <td>Programming:</td>
+              <td>Java, Python, C++, JavaScript</td>
+            </tr>
+            <tr>
+              <td>Web Technologies:</td>
+              <td>HTML5, CSS3, JSP, Servlet, Bootstrap, Tailwind CSS, Laravel</td>
+            </tr>
+            <tr>
+              <td>Databases:</td>
+              <td>MySQL, SQL (CRUD Operations, Schema Design)</td>
+            </tr>
+            <tr>
+              <td>Tools &amp; Platforms:</td>
+              <td>Git, GitHub, VS Code, Eclipse, IntelliJ, Raspberry Pi Pico W, Microsoft Office</td>
+            </tr>
+            <tr>
+              <td>Core Strengths:</td>
+              <td>Problem Solving, Debugging, Analytical Thinking, OOP, MVC Architecture, Fast Learner</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Work Experience -->
+      <div class="r-section">
+        <h2 class="r-section-title">Work Experience</h2>
+
+        <div class="r-entry">
+          <div class="r-entry-header">
+            <span class="r-entry-title">Software Developer <span class="r-entry-company">— Universiti Malaysia Terengganu (Academic Project)</span></span>
+            <span class="r-entry-date">Jul 2025 – Present</span>
+          </div>
+          <ul class="r-ul">
+            <li>Developed a web-based system for managing student violation records and user profiles.</li>
+            <li>Designed and implemented features including profile management, summons tracking, and predictive analytics.</li>
+            <li>Ensured data accuracy and system efficiency through structured MySQL database integration.</li>
+            <li>Improved user interface design for better usability and overall system interaction.</li>
+          </ul>
+        </div>
+
+        <div class="r-entry">
+          <div class="r-entry-header">
+            <span class="r-entry-title">Committee Member <span class="r-entry-company">— COMTECH, Computer and Technology Student Club, UMT</span></span>
+            <span class="r-entry-date">Jan 2025 – Present</span>
+          </div>
+          <ul class="r-ul">
+            <li>Managed and maintained digital platforms including social media and communication channels.</li>
+            <li>Designed and developed digital content such as posters and promotional materials.</li>
+            <li>Assisted in improving communication efficiency through digital solutions and team coordination.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Projects -->
+      <div class="r-section">
+        <h2 class="r-section-title">Project Experience</h2>
+
+        <div class="r-entry">
+          <div class="r-entry-header">
+            <span class="r-entry-title">UMT e-Summons System — Final Year Project (FYP)</span>
+          </div>
+          <p class="r-entry-tech"><span>Technologies:</span> Java, JSP, Servlet, MySQL, GitHub, HTML, CSS</p>
+          <ul class="r-ul">
+            <li>Built a web-based summons management system for UMT using Java, JSP Servlet, and MySQL.</li>
+            <li>Managed full development cycle: database design, back-end logic, and front-end UI.</li>
+            <li>Implemented predictive analytics feature to identify patterns in student violation data.</li>
+          </ul>
+        </div>
+
+        <div class="r-entry">
+          <div class="r-entry-header">
+            <span class="r-entry-title">Real-Time IoT Flood Detection System</span>
+          </div>
+          <p class="r-entry-tech"><span>Technologies:</span> Raspberry Pi Pico W, MicroPython, IoT Sensors, Web Dashboard</p>
+          <ul class="r-ul">
+            <li>Developed an IoT monitoring system using Raspberry Pi Pico W with a live web dashboard.</li>
+            <li>Built backend server scripts and microcontroller code for real-time flood data collection.</li>
+            <li>Connected hardware sensor data to a web interface for live monitoring and alerting.</li>
+          </ul>
+        </div>
+
+        <div class="r-entry">
+          <div class="r-entry-header">
+            <span class="r-entry-title">Bus Booking System — Group Project</span>
+          </div>
+          <p class="r-entry-tech"><span>Technologies:</span> Java EE, MySQL, HTML, CSS</p>
+          <ul class="r-ul">
+            <li>Collaborated in a team to build a web-based bus booking management system.</li>
+            <li>Implemented booking logic, user management, and database operations.</li>
+          </ul>
+        </div>
+
+        <div class="r-entry">
+          <div class="r-entry-header">
+            <span class="r-entry-title">UMPSA Hackathon — Participant</span>
+          </div>
+          <ul class="r-ul">
+            <li>Applied analytical and development skills to deliver a working solution under time constraints.</li>
+            <li>Collaborated with team members across idea development, implementation, and presentation.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Education -->
+      <div class="r-section">
+        <h2 class="r-section-title">Education</h2>
+
+        <div class="r-entry">
+          <div class="r-entry-header">
+            <span class="r-entry-title">Universiti Malaysia Terengganu (UMT)</span>
+            <span class="r-entry-date">2023 – Present</span>
+          </div>
+          <p class="r-entry-sub">Bachelor of Computer Science with Maritime Informatics (Honours) | Faculty of Computing and Mathematics</p>
+          <p class="r-gpa">CGPA: 3.34 | Expected Graduation: October 2027</p>
+          <p style="font-size:11.5px; color:#555; margin-top:2px;">
+            Coursework: Web Application Development · Software Project Management · Networking · IoT · Cybersecurity · Simulation &amp; Modelling
+          </p>
+        </div>
+
+        <div class="r-entry">
+          <div class="r-entry-header">
+            <span class="r-entry-title">Perak Matriculation College</span>
+            <span class="r-entry-date">2022 – 2023</span>
+          </div>
+          <p class="r-entry-sub">Biological Science (Matriculation) | CGPA: 3.17</p>
+        </div>
+      </div>
+
+      <!-- Certifications -->
+      <div class="r-section">
+        <h2 class="r-section-title">Certifications &amp; Training</h2>
+        <ul class="r-ul">
+          <li>UMPSA Hackathon — Universiti Malaysia Pahang Al-Sultan Abdullah</li>
+          <li>Laravel Workshop</li>
+        </ul>
+      </div>
+
+      <!-- Additional -->
+      <div class="r-section">
+        <h2 class="r-section-title">Additional Information</h2>
+        <table class="r-additional-table" aria-label="Additional information">
+          <tbody>
+            <tr>
+              <td>Languages:</td>
+              <td>English (Proficient — reading &amp; writing), Bahasa Melayu (Fluent, native)</td>
+            </tr>
+            <tr>
+              <td>Strengths:</td>
+              <td>Analytical thinking, fast learner, self-driven, structured debugging approach, team player</td>
+            </tr>
+            <tr>
+              <td>Availability:</td>
+              <td>Open to internship opportunities; willing to relocate; based in Bagan Datuk, Perak</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div><!-- /resume-page -->
+  </div><!-- /page-wrap -->
+
+  <script>
+    document.getElementById && document.querySelectorAll('.btn-print').forEach(btn => {
+      btn.addEventListener('click', () => window.print());
+    });
+  </script>
+
+</body>
+</html>
+>>>>>>> 538d31b (initial commit)

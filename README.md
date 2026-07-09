@@ -39,7 +39,7 @@ portfolio/
 | **Work Experience** | Timeline of academic and co-curricular roles |
 | **Project Experience** | 4 project cards with tech badges and GitHub links |
 | **Education** | Degree, matriculation, and coursework details |
-| **Certifications** | CompTIA Data+, UMPSA Hackathon, Laravel Workshop |
+| **Certifications** | UMPSA Hackathon, Laravel Workshop |
 | **Resume** | PDF download, ATS Mode, and Google Drive iframe preview |
 
 ---
